@@ -4,7 +4,8 @@ VAR
     c : CHAR;
     p_ent,p_dec : INTEGER;
 BEGIN
-    WHILE (state<>4 and state<>5) DO
+   REPEAT
+       
         Write('enter the character ')
         Read(c)
         SWITCH (state) DO
@@ -41,7 +42,8 @@ BEGIN
                 state:=5
             END_IF
         END_SWITCH
-    END_WHILE
+
+   UNTIL(state<>4 and state<>5) 
     IF (state=4) THEN
         write("valid expression ")
         write(p_ent);
